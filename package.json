@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Thierry Legal Lens Blog built with Eleventy",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "start": "eleventy --input=src --output=_site --serve --formats=njk,md,html,css,js,yml,png,jpg,jpeg,svg",
+    "build": "eleventy --input=src --output=_site --formats=njk,md,html,css,js,yml,png,jpg,jpeg,svg"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1"
