@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+
+<main class="fade-in">
+    <article>
+        <div class="post-header">
+            <span class="tag">{{ category }}</span>
+            <h1>{{ title }}</h1>
+            <div class="post-meta">
+                <div class="author-block">
+                    <div class="author-avatar">{{ author | truncate(1, true, "") }}</div>
+                    <span>{{ author }}</span>
+                </div>
+                <span><i class="far fa-calendar-alt"></i> {{ page.date.toLocaleDateString() }}</span>
+                <span><i class="far fa-clock"></i> {{ read_time }} Min Read</span>
+            </div>
+        </div>
+
+        <img src="{{ thumbnail }}" alt="{{ title }}" class="post-hero-img fade-in">
+
+        <div class="post-content">
+            {{ content | safe }}
+        </div>
+    </article>
+</main>

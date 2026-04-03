@@ -1,0 +1,44 @@
+---
+layout: base.njk
+title: Home | Thierry Legal Lens
+---
+
+<section class="hero">
+    <div class="hero-bg">
+        <img src="/assets/images/hero.png" alt="Scales of Justice">
+    </div>
+    <div class="hero-content fade-in">
+        <span class="tag">Critical Legal Analysis</span>
+        <h1>Principled Commentary on Contemporary Law</h1>
+        <p>Advancing doctrinal interpretation, comparative inquiry, and normative evaluation across public law, cyber regulation, state responsibility, and human rights.</p>
+        <a href="#articles" class="btn">Explore Articles</a>
+    </div>
+</section>
+
+<main id="articles">
+    <div class="section-header fade-in">
+        <h2>Recent Publications</h2>
+        <p>Grounded in academic integrity and jurisprudential rigor.</p>
+    </div>
+
+    <div class="blog-grid fade-in">
+        {% for post in collections.posts | reverse %}
+        <article class="blog-card">
+            <div class="card-img">
+                <a href="{{ post.url }}">
+                    <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+                </a>
+            </div>
+            <div class="card-content">
+                <div class="meta">
+                    <span class="category">{{ post.data.category }}</span>
+                    <span class="date">{{ post.date.toLocaleDateString() }}</span>
+                </div>
+                <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                <p>{{ post.data.description }}</p>
+                <a href="{{ post.url }}" class="read-more">Read Analysis <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</main>
