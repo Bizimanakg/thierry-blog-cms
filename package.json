@@ -1,0 +1,12 @@
+{
+  "name": "thierry-legal-lens-blog",
+  "version": "1.0.0",
+  "description": "Thierry Legal Lens Blog built with Eleventy",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

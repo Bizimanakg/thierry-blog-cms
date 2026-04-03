@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default("Thierry Legal Lens | Scholarly Legal Analysis") }}</title>
+    <meta name="description" content="A scholarly platform dedicated to critical legal analysis and principled commentary on contemporary issues in law, governance, strategy, and security.">
+    <!-- Admin CMS Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">Thierry <span>Legal Lens</span></a>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/#articles">Articles</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+
+    {{ content | safe }}
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Thierry Legal Lens</h3>
+                <p>A scholarly platform dedicated to critical legal analysis and principled commentary on contemporary issues in law, governance, strategy, and security.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Themes</h3>
+                <ul>
+                    <li><a href="#">Public Law</a></li>
+                    <li><a href="#">Cyber Regulation</a></li>
+                    <li><a href="#">State Responsibility</a></li>
+                    <li><a href="#">Human Rights</a></li>
+                    <li><a href="#">Security Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Academic Integrity</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Thierry Legal Lens Blog. All scholarly rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
